@@ -1,0 +1,952 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", Arial, sans-serif;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll bar */
+}
+
+.container {
+    background-color: white;
+    border: 1px solid rgb(183, 183, 183);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 225px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 600;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #00000099;
+}
+
+.navbar ul li:first-child a {
+    color: #003300;
+}
+
+.navbar ul li:last-child a {
+    color: #00000099;
+}
+
+.navbar ul button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 25px;
+    border: 3px solid gray;
+    font-weight: 600;
+    color: gray;
+    background-color: white;
+}
+
+.download-btn:hover {
+    background-color: #003300;
+    color: white;
+    border: 3px solid #003300;
+
+}
+
+
+
+.navbar ul li:not(:last-child) {
+    border-bottom: none !important;
+    border-right: none !important;
+}
+
+
+
+.navbar .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px !important;
+}
+
+.logo img {
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/*-----------Header Design-------------------  */
+
+/*----Main-Container----*/
+
+.hero-section {
+    width: 100vw;
+    height: 75vh;
+    margin: 0 auto;
+    background-image: url('backheader.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.overlay {
+    /* background: rgba(0, 0, 0, 0.6); optional overlay */
+    width: 100%;
+    height: 100%;
+    /* padding: 60px 20px; */
+}
+
+.content {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Left text content */
+/* .left-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+} */
+
+.left-content h1 {
+    font-size: 120px;
+    margin-bottom: 20px;
+    margin-top: 7%;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: orange;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.app-highlight {
+    color: #00e6e6;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.left-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    max-width: 650px;
+    line-height: 2;
+    font-weight: 500;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.buttons img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.buttons img:hover {
+    transform: scale(1.05);
+}
+
+.watch-video {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.watch-video span {
+    font-size: 20px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    padding: 4px 8px;
+}
+
+/* Right side image */
+.right-image {
+    /* flex: 1;
+    min-width: 300px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.right-image img {
+    /* max-width: 100%; */
+    width: 470px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1220px) {
+
+    .hero-section {
+        height: auto;
+    }
+
+    .content {
+        flex-direction: column;
+
+        margin: 0 20px 0 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        height: auto;
+    }
+
+    .content {
+        flex-direction: column;
+
+        margin: 0 20px 0 0;
+    }
+
+    br {
+        display: none;
+    }
+
+    .left-content h1 {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .right-image {
+        padding: 0;
+    }
+
+    .left-content p {
+        margin: auto;
+        text-align: left;
+
+    }
+
+    .buttons {
+        justify-content: start;
+        margin-top: 25px;
+
+    }
+
+    .buttons a img {
+        display: inline-block;
+
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero-section {
+        height: auto;
+    }
+
+    .content {
+        flex-direction: column;
+        margin-left: 20px
+    }
+
+    br {
+        display: none;
+    }
+
+    .left-content h1 {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .right-image img {
+        width: 100%;
+    }
+
+    .left-content p {
+        margin: auto;
+        text-align: left;
+
+    }
+
+    .buttons {
+        justify-content: start;
+        margin-top: 25px;
+    }
+}
+
+/* ------------prayer Time page----------------- */
+
+.prayer-section {
+    margin: 6% auto 0 auto;
+    position: relative;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.overlay1 {
+    /* gray with 50% opacity */
+    padding: 40px 20px;
+    background-image: url('prayer-back-header.png');
+    background-color: rgba(128, 128, 128, 0.1);
+    background-size: cover;
+    background-position: end;
+}
+
+.content-container {
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.left-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: none
+}
+
+.right-text {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 5%;
+    color: #666666;
+}
+
+.right-text h2 {
+    font-size: 50px;
+    color: #004000;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text-box p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.text-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 930px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right-text {
+        margin-right: 0;
+    }
+
+    .right-text h2 {
+        font-size: 28px;
+    }
+
+    .text-box {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .overlay1 {
+        /* gray with 50% opacity */
+        padding: 40px 20px;
+        background-image: url('prayer-back-header.png');
+        background-color: rgba(128, 128, 128, 0.1);
+        background-size: cover;
+        background-position: center;
+
+    }
+}
+
+/* Why deeniapp (about) page */
+
+.about-section {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.overlay2 {
+    padding: 40px 20px;
+    background-color: white;
+}
+
+.content-box {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.left-text1 h2 {
+    font-size: 32px;
+    color: #004000;
+    margin-left: 2%
+}
+
+.left-text1 {
+    margin-right: 4%
+}
+
+.left-text1 ul li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #666666;
+}
+
+.right-image1 img {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+/* responsive design for about section */
+@media (max-width: 1010px) {
+    .left-text1 h2 {
+        font-size: 28px;
+    }
+}
+
+/*----------Deeniapp feature page---------*/
+
+.feature-section {
+    width: 100%;
+    position: relative;
+
+}
+
+.overlay3 {
+    padding: 40px 20px;
+}
+
+.feature-content {
+    max-width: 2000px;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 0.5;
+    /* background-color: darkgray */
+}
+
+.feature-top h2 {
+    font-size: 50px;
+    color: #004000;
+    font-weight: 700;
+    text-align: center;
+}
+
+.feature-top p {
+    font-size: 15px;
+    text-align: center;
+    color: #666666;
+}
+
+.feature-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.feature-images img {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    /* border: 5px solid black; */
+    border-radius: 35px
+}
+
+.special-box {
+    transform: translateY(-5%);
+}
+
+.feature-btn {
+    text-align: center;
+    margin-top: 20px
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #004000;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+
+/*---------Responsive Feature section-------------*/
+@media (max-width: 1740px) {
+    .special-box {
+        transform: none;
+    }
+
+    .feature-images img {
+        width: 300px
+    }
+
+    .btn {
+        margin-top: 20px
+    }
+}
+
+@media (max-width: 1010px) {
+    .overlay3 {
+        margin-top: 20px
+    }
+
+    .feature-top p {
+        line-height: 1.5;
+    }
+
+    .feature-top h2 {
+        line-height: 1.2;
+        font-size: 28px;
+    }
+
+    .feature-images {
+        gap: 70px
+    }
+}
+
+@media (max-width: 710px) {
+    .feature-images img {
+        width: 250px
+    }
+}
+
+@media (max-width: 610px) {
+    .feature-images img {
+        width: 180px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 470px) {
+    .feature-images img {
+        width: 280px;
+
+    }
+}
+
+/*-----------Testimonial page---------*/
+
+.testimonial {
+
+
+    overflow-x: hidden;
+    margin-top: 6%;
+    width: 100vw;
+}
+
+.overlay4 {
+    padding: 0 20px;
+    background-image: url('prayer-back-header.png');
+    background-color: rgba(128, 128, 128, 0.1);
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(128, 128, 128, 0.1);
+
+}
+
+.whole-container {
+    max-width: 1500px;
+    /* background-color: gray; */
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+
+}
+
+.download h1 {
+    font-size: 160px;
+    color: #8488ea;
+    margin: 0;
+    text-shadow: 10px 20px 25px rgb(151, 154, 236);
+}
+
+
+.review h1 {
+    font-size: 160px;
+    color: #fa5d87;
+    margin: 0;
+    text-shadow: 10px 20px 25px rgb(240, 128, 158);
+}
+
+.download h2,
+.review h2 {
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+}
+
+.review img {
+    /* background-color: red */
+    margin-top: 20px
+}
+
+.thank-you {
+    text-align: center;
+    margin-top: 3%
+}
+
+.thank-you span {
+    font-size: 32px;
+    font-weight: bold;
+    color: #004000;
+}
+
+.thank-you p {
+    font-size: 18px;
+    color: #666666;
+}
+
+.thank-you strong {
+    color: #474747
+}
+
+.boxes {
+    /* background-color: red; */
+    max-width: 1500px;
+    gap: 130px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3%;
+
+
+}
+
+.box {
+    width: 230px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 3%;
+}
+
+.box h3 {
+    font-size: 16px;
+}
+
+.rev1 {
+    margin-bottom: 63px;
+}
+
+.rev2 {
+    margin-bottom: 43px;
+}
+
+.user {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+/*---------Responsive Design---------------*/
+
+@media (max-width: 1010px) {
+    .whole-container {
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .thank-you {
+        padding: 20px
+    }
+
+    .boxes {
+        gap: 30px
+    }
+
+    .box {
+        width: 100%;
+        margin: 10px
+    }
+
+    .thank-you p {
+        font-size: 15px;
+        color: #666666;
+    }
+
+    .download h1,
+    .review h1 {
+        font-size: 100px;
+        color: #8488EA;
+        margin: 0;
+    }
+
+    .review h1 {
+        color: #fa5d87;
+    }
+
+    .download h2,
+    .review h2 {
+        text-align: center;
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .review img {
+        width: 40%;
+        margin-top: 40px
+    }
+
+    .thank-you p {
+        line-height: 1.7;
+    }
+}
+
+/*--------Footer Section---*/
+
+.footer-section {
+    width: 100%;
+
+}
+
+.overlay5 {
+    padding: 40px 20px;
+    background-color: #242424;
+
+}
+
+.footer-content {
+    max-width: 1200px;
+    /* background-color: darkgray; */
+    justify-content: center;
+    margin: auto
+}
+
+.upper-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px
+}
+
+.logowithtext {
+    max-width: 200px;
+    /* background-color: lightgray; */
+    padding: 20px;
+    border-radius: 1px solid black
+}
+
+.logo-name {
+    display: flex;
+    gap: 10px
+}
+
+.logo-name h2 {
+    margin: 0;
+    color: #999999
+}
+
+.logo-name img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px
+}
+
+.logo-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666
+}
+
+.footer-btn {
+    max-width: 200px;
+    /* background-color: lightgray; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-btn a img {
+    width: 140px;
+    margin: auto;
+}
+
+
+.Tags {
+    max-width: 200px;
+    /* background-color: lightgray; */
+}
+
+.Tags ul {
+    padding: 0;
+    margin: 0;
+    line-height: 2.5;
+    font-weight: bold
+}
+
+.Tags ul li {
+    list-style: none;
+    margin: 20;
+    color: #666666
+}
+
+.Links-mail {
+    max-width: 200px;
+    /* background-color: lightgray */
+}
+
+.feature {
+    margin-bottom: 70px
+}
+
+.Links-mail ul {
+    padding: 0;
+    margin: 0;
+    font-weight: bold
+}
+
+.Links-mail ul li {
+    list-style: none;
+    margin: 20;
+    color: #666666
+}
+
+.support-mail {
+    font-weight: 400
+}
+
+.icons {
+    max-width: 1200px;
+    width: 100%;
+    /* background-color: darkgray; */
+    justify-content: center;
+    margin: auto;
+    
+    
+}
+
+.icon {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 30px;
+    flex-wrap: wrap
+
+}
+
+.fa-brands {
+    font-size: 25px;
+    background-color: none;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    border: 2px solid white
+}
+
+/*-------Responsive Design--------------------*/
+
+@media (max-width: 750px) {
+    .upper-footer {
+        justify-content: start
+    }
+
+    .logowithtext {
+        max-width: 100%
+    }
+
+    .footer-btn {
+        max-width: 100%
+    }
+
+    .Tags {
+        max-width: 100%
+    }
+
+    .Links-mail {
+        max-width: 100%
+    }
+}
+
+
+@media (max-width: 470px) {
+    .upper-footer {
+        flex-direction: column
+    }
+    .icon {
+        flex-direction: column;
+    }
+
+    .fa-brands {
+        text-align: center;
+        border: none;
+        border: 2px solid white;
+        margin: auto
+    }
+    
+    
+}
